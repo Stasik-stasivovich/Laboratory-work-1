@@ -8,7 +8,7 @@ Task Обов'язково використовувати рекурсію та 
 Розв'язати двома способами: з використанням циклів (але використовуючи рекурентність) та з використанням рекурсивних викликів методів.
  */
 public class Task7 extends ConsoleProgram {
-    private static final double ACCURACY = 10;
+    private static final double ACCURACY = 0.000001;
     public void run() {
         println("Calculation of approximate value of e**x");
         double x = readDouble("X: ");
@@ -16,6 +16,7 @@ public class Task7 extends ConsoleProgram {
         println("Recurs ="+calculateRecursCall(x));
         println("Recurrent ="+calculatRecurent(x));
         println("More optimal ="+calculatOptimal(x));
+        println("E^x = "+Math.exp(x));
     }
 
     private double calculatOptimal(double x) {// оптимальне рішення (+-)

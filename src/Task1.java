@@ -15,9 +15,9 @@ BRICKS_IN_BASE - 14
 
  */
 public class Task1 extends GraphicsProgram {
-    private final int BRICK_WIDTH = 20;
-    private final int BRICK_HEIGHT = 20;
-    private final int BRICK_IN_BASE = 30;
+    private final int BRICK_WIDTH = 80;
+    private final int BRICK_HEIGHT = 30;
+    private final int BRICK_IN_BASE = 20;
     private final int HEIGHT = 700;
     private final int WIDTH = 700;
     public void run() {

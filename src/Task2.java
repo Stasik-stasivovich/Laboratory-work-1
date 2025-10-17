@@ -23,13 +23,13 @@ public class Task2 extends GraphicsProgram {
     private final int HEIGHT = 600;
     private final int WIDTH = 600;
     private final int RADIUS = 50;
-    private final int NUMBER_OF_CIRCLE = 11;
+    private final int NUMBER_OF_CIRCLE = 13;
     public void run(){
         setSize(WIDTH, HEIGHT);
         int x = getWidth()/2;
         int y = getHeight()/2;
         Color color;
-        for (int i=NUMBER_OF_CIRCLE+1;i>=1;i--){
+        for (int i=NUMBER_OF_CIRCLE;i>=1;i--){
             if (i%2==1) color = Color.RED;
             else color = Color.BLACK;
             createCircle(x,y,RADIUS*i,color);

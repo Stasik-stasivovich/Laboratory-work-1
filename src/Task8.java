@@ -8,14 +8,17 @@ Task Обов'язково використовувати рекурсію та 
 Розв'язати двома способами: з використанням циклів (але використовуючи рекурентність) та з використанням рекурсивних викликів методів.
  */
 public class Task8 extends ConsoleProgram {
-    private final double ACCURACY=0.0001;
+    private final double ACCURACY=0.0000001;
     public void run() {
         println("Calculation of approximate value of cos(x)");
-        double x = readDouble("Please enter a number: ");
-        while (x<-Math.PI/4||x>Math.PI/4)x = readDouble("Number must be between -pi/4 and pi/4");
-        println("Recurs "+recursCosCall(x));
-        println("Recurrent "+recurentCos(x));
-        println("Smart "+optimalCos(x));
+        while (readInt("Continue -1 ")==1) {
+            double x = readDouble("Please enter a number: ");
+            while (x < -Math.PI / 4 || x > Math.PI / 4) x = readDouble("Number must be between -pi/4 and pi/4");
+            println("Recurs " + recursCosCall(x));
+            println("Recurrent " + recurentCos(x));
+            println("Smart " + optimalCos(x));
+            println("Cos(x) - " + Math.cos(x));
+        }
     }
     private double optimalCos(double x) {// оптимальний розв'язок (+-)
         double sum = 1;

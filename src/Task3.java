@@ -14,8 +14,8 @@ Task Написати програму, що малює часткову діа�
 
  */
 public class Task3 extends GraphicsProgram {
-    private static final int HEIGHT = 800;
-    private static final int WIDTH = 800;
+    private static final int HEIGHT = 700/4;
+    private static final int WIDTH = 700/5;
     public void run() {
         setSize(WIDTH, HEIGHT);
         int rectWidth = WIDTH/5;

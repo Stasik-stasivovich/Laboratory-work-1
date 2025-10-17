@@ -10,16 +10,21 @@ Task Написати програму, що зчитує з клавіатур�
 Якщо користувач в першій же стрічці введе символ закінчення вводу, тоді вважається, що жодного числа не було введено і програма має це повідомити.
  */
 public class Task5 extends ConsoleProgram {
-    private static final int STOP_NUMBER=5;
+    private static final int STOP_NUMBER=-1;
     public void run() {
         while (readInt("Continue - 1")==1) {
-            int ans = 0;
+            int max = Integer.MIN_VALUE;
+            int min = Integer.MAX_VALUE;
             int a = readInt("Enter number: ");
             while (a != STOP_NUMBER) {
-                ans += a;
+                min = Math.min(min, a);
+                max = Math.max(max, a);
                 a = readInt("Enter number: ");
             }
-            println("Answer: " + ans);
+            if (max==Integer.MIN_VALUE)println("No number");
+            else{
+                println("max ="+max+", min ="+min);
+            }
         }
     }
     public static void main(String[] args){

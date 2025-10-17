@@ -12,8 +12,11 @@ Task Опис алгоритму:
  */
 public class Task6 extends ConsoleProgram {
     public void run(){
-        int startNumber = readInt("Enter start number: ");
-        println("Number of steps: "+doCycle(startNumber));
+        while (readInt("Continue -1")==1) {
+            int startNumber = readInt("Enter start number: ");
+            while (startNumber < 1) startNumber = readInt("must be >=1");
+            println("Number of steps: " + doCycle(startNumber));
+        }
     }
 
     private int doCycle(int startNumber) {// do cycle

@@ -1,5 +1,12 @@
 import acm.program.ConsoleProgram;
+/*
+Author Stanislav Koshynskyi
+File Task1
+Task Обов'язково використовувати рекурсію та рекурентність
+Послідовність сум {sn}, де sn=1+x+x2/2!+…+xn/n!, за умови 0<=x<1 "достатньо швидко" сходиться до ex. Запрограмувати обчислення ex при x [0;1) із точністю ep , тобто за потрібне число приймається перше snтаке, що | sn-sn-1 |<ep .
 
+Розв'язати двома способами: з використанням циклів (але використовуючи рекурентність) та з використанням рекурсивних викликів методів.
+ */
 public class Task7 extends ConsoleProgram {
     private static final double ACCURACY = 10;
     public void run() {
@@ -11,7 +18,7 @@ public class Task7 extends ConsoleProgram {
         println("More optimal ="+calculatOptimal(x));
     }
 
-    private double calculatOptimal(double x) {
+    private double calculatOptimal(double x) {// оптимальне рішення (+-)
         double numberNow = 1;
         int counter = 1;
         double sum=1;
@@ -24,7 +31,7 @@ public class Task7 extends ConsoleProgram {
 
     }
 
-    private double calculatRecurent(double x) {
+    private double calculatRecurent(double x) {// рекурентне рішення
         double numberNow=1;
         int counter =1;
         double sum=1;
@@ -36,7 +43,7 @@ public class Task7 extends ConsoleProgram {
         return sum;
     }
 
-    private double facrorialRecurent(int number) {
+    private double facrorialRecurent(int number) {//обчислення факторіала рекурентно
         int factorial = 1;
         for (int i = 1; i <= number; i++) {
             factorial *= i;
@@ -44,17 +51,17 @@ public class Task7 extends ConsoleProgram {
         return factorial;
     }
 
-    private double calculateRecursCall(double x) {
+    private double calculateRecursCall(double x) {//метод що викликає рекурентне обчислення
         return calculateRecurs(x,0,0);
     }
-    private double calculateRecurs(double x,int number, double sum) {
+    private double calculateRecurs(double x,int number, double sum) {// рекурсивне обчислення
 
         double elementNow= Math.pow(x,number)/factorialRecurs(number);
         sum+=elementNow;
         if (elementNow<ACCURACY) return sum;
         return calculateRecurs(x,number+1,sum);
     }
-    private int factorialRecurs(int a){
+    private int factorialRecurs(int a){//рекурсивний факторіал
         if (a==0) return 1;
         return a*factorialRecurs(a-1);
     }

@@ -1,12 +1,22 @@
 import acm.program.ConsoleProgram;
+/*
+Author Stanislav Koshynskyi
+File Task1
+Task Опис алгоритму:
 
+візьміть позитивне ціле число, назвемо його n
+якщо n парне, поділимо його на 2
+якщо n не парне, помножимой його на 3 і додамо 1
+продовжувати цей процес поки n не буде дорівнювати 1
+Напишіть програму, що реалізує вказаний алгоритм і наочно проілюструє його виконання. В кінці обов'язково повідомити кількість кроків.
+ */
 public class Task6 extends ConsoleProgram {
     public void run(){
         int startNumber = readInt("Enter start number: ");
         println("Number of steps: "+doCycle(startNumber));
     }
 
-    private int doCycle(int startNumber) {
+    private int doCycle(int startNumber) {// do cycle
         int temp;
         int counter=0;
         while (startNumber!=1){

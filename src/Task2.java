@@ -1,8 +1,24 @@
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
-
 import java.awt.*;
+/*
+Author Stanislav Koshynskyi
+File Task1
+Task Ви маєте написати програму, що малює зображення "мішень для лучника". Приклад:
 
+
+
+Мішень має розташовуватися по центру вікна. Мають бути використані константи:
+
+
+
+ширира світу;
+висота світу;
+кількість кругів.
+
+
+
+ */
 public class Task2 extends GraphicsProgram {
     private final int HEIGHT = 600;
     private final int WIDTH = 600;
@@ -23,7 +39,7 @@ public class Task2 extends GraphicsProgram {
         new  Task2().start(args);
 
     }
-    private void createCircle(int x, int y, int radius, Color color){
+    private void createCircle(int x, int y, int radius, Color color){//create circle
         GOval g = new GOval(x-radius/2, y-radius/2, radius, radius);
         g.setColor(color);
         g.setFilled(true);

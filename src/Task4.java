@@ -1,6 +1,16 @@
 import acm.program.ConsoleProgram;
 
+/*
+Author Stanislav Koshynskyi
+File Task1
+Task Написати програму, що запитує у користувача два числа і обраховує корень квадратний з суми їх квадратів.
 
+Теорема піфагора
+
+
+
+
+ */
 public class Task4 extends ConsoleProgram {
     public void  run() {
         while (readInt("Continue - 1") == 1) {
